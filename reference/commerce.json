@@ -10,24 +10,24 @@
       "url": "https://api.staging.deliverect.com"
     }
   ],
-   "tags": [
-        {
-            "name": "Menus",
-            "description": "Endpoints for retrieving menu data."
-        },
-        {
-            "name": "Basket",
-            "description": "Endpoints for creating and managing baskets."
-        },
-        {
-            "name": "Checkout",
-            "description": "Endpoints for creating and managing checkouts."
-        },
-        {
-            "name": "Stores",
-            "description": "Endpoints for retrieving store data."
-        }
-    ],
+  "tags": [
+    {
+      "name": "Menus",
+      "description": "Endpoints for retrieving menu data."
+    },
+    {
+      "name": "Basket",
+      "description": "Endpoints for creating and managing baskets."
+    },
+    {
+      "name": "Checkout",
+      "description": "Endpoints for creating and managing checkouts."
+    },
+    {
+      "name": "Stores",
+      "description": "Endpoints for retrieving store data."
+    }
+  ],
   "security": [
     {
       "oauth2ClientCredentials": []
@@ -59,7 +59,7 @@
   "paths": {
     "/commerce/{accountId}/menus": {
       "get": {
-      "tags": [
+        "tags": [
           "Menus"
         ],
         "summary": "Get Root Menu(s)",
@@ -13298,7 +13298,6 @@
     },
     "/commerce/{accountId}/stores": {
       "get": {
-        
         "tags": [
           ""
         ],
