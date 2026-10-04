@@ -7440,7 +7440,7 @@
         }
       }
     },
-    "/commerce/{accountId}/baskets/{basketId}/group/policies":{
+    "/commerce/{accountId}/baskets/{basketId}/group/policies": {
       "patch": {
         "tags": [
           "Basket"
