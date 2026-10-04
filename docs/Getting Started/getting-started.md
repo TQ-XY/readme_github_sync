@@ -1,6 +1,7 @@
 ---
 title: Welcome to readme_sync
-hidden: false
+privacy:
+  view: public
 ---
 <Callout icon="📘" theme="info">
   **Template:**  Delete this callout and edit this page with your content and links.

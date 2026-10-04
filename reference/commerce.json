@@ -10,6 +10,24 @@
       "url": "https://api.staging.deliverect.com"
     }
   ],
+   "tags": [
+        {
+            "name": "Menus",
+            "description": "Endpoints for retrieving menu data."
+        },
+        {
+            "name": "Basket",
+            "description": "Endpoints for creating and managing baskets."
+        },
+        {
+            "name": "Checkout",
+            "description": "Endpoints for creating and managing checkouts."
+        },
+        {
+            "name": "Stores",
+            "description": "Endpoints for retrieving store data."
+        }
+    ],
   "security": [
     {
       "oauth2ClientCredentials": []
@@ -41,8 +59,8 @@
   "paths": {
     "/commerce/{accountId}/menus": {
       "get": {
-        "tags": [
-          "Endpoints"
+      "tags": [
+          "Menus"
         ],
         "summary": "Get Root Menu(s)",
         "operationId": "commerce-channel-api-menus-get-root-menus",
@@ -1571,7 +1589,7 @@
     "/commerce/{accountId}/baskets/{basketId}": {
       "get": {
         "tags": [
-          "Endpoints"
+          "Basket"
         ],
         "summary": "Get Basket",
         "operationId": "commerce-channel-api-baskets-get-basket",
@@ -2676,7 +2694,7 @@
     "/commerce/{accountId}/baskets/{basketId}/customer": {
       "patch": {
         "tags": [
-          "Endpoints"
+          "Basket"
         ],
         "summary": "Update Basket - Customer",
         "operationId": "commerce-channel-api-baskets-update-basket-customer",
@@ -3057,7 +3075,7 @@
     "/commerce/{accountId}/baskets/{basketId}/items": {
       "patch": {
         "tags": [
-          "Endpoints"
+          "Basket"
         ],
         "summary": "Update Basket - Item(s)",
         "operationId": "commerce-channel-api-baskets-update-basket-items",
@@ -3525,7 +3543,7 @@
     "/commerce/{accountId}/baskets/{basketId}/discounts": {
       "patch": {
         "tags": [
-          "Endpoints"
+          "Basket"
         ],
         "summary": "Update Basket - Discount(s)",
         "operationId": "commerce-channel-api-baskets-update-basket-discounts",
@@ -4043,7 +4061,7 @@
     "/commerce/{accountId}/baskets/{basketId}/charges": {
       "patch": {
         "tags": [
-          "Endpoints"
+          "Basket"
         ],
         "summary": "Update Basket - Charges",
         "operationId": "commerce-channel-api-baskets-update-basket-charges",
@@ -4476,7 +4494,7 @@
     "/commerce/{accountId}/v2/checkouts/{checkoutId}": {
       "get": {
         "tags": [
-          "Endpoints"
+          "Checkout"
         ],
         "summary": "Get Checkout",
         "operationId": "get_commerce{accountId}checkouts{checkoutId}-1",
@@ -5436,7 +5454,7 @@
     "/commerce/{accountId}/baskets/{basketId}/fulfillment": {
       "patch": {
         "tags": [
-          "Endpoints"
+          "Basket "
         ],
         "summary": "Update Basket - Fulfillment Details",
         "operationId": "commerce-channel-api-baskets-update-basket-fulfillment",
@@ -5810,6 +5828,9 @@
     },
     "/commerce/{accountId}/baskets/{basketId}/validate": {
       "post": {
+        "tags": [
+          "Basket"
+        ],
         "summary": "Validate Basket",
         "parameters": [
           {
@@ -6313,6 +6334,9 @@
     },
     "/commerce/{accountId}/baskets/recreate": {
       "post": {
+        "tags": [
+          "Basket"
+        ],
         "responses": {
           "200": {
             "description": "",
@@ -6942,7 +6966,7 @@
     "/commerce/{accountId}/baskets/{basketId}/customers": {
       "patch": {
         "tags": [
-          "Endpoints"
+          "Basket"
         ],
         "summary": "Update Basket - Group Customers",
         "operationId": "commerce-channel-api-baskets-update-basket-customer-1",
@@ -7418,6 +7442,9 @@
     },
     "/commerce/{accountId}/baskets/{basketId}/group/policies": {
       "patch": {
+        "tags": [
+          "Basket"
+        ],
         "responses": {
           "200": {
             "description": "",
@@ -7886,7 +7913,7 @@
     "/commerce/{accountId}/stores/{channelLinkId}": {
       "get": {
         "tags": [
-          "Endpoints"
+          "Stores"
         ],
         "summary": "Get Store",
         "operationId": "commerce-channel-api-stores-get-store",
@@ -9351,7 +9378,7 @@
     "/commerce/{accountId}/stores/{channelLinkId}/menus": {
       "get": {
         "tags": [
-          "Endpoints"
+          "Menus"
         ],
         "summary": "Get Store Menu(s)",
         "operationId": "commerce-channel-api-stores-get-store-menus",
@@ -10388,6 +10415,9 @@
     },
     "/commerce/{accountId}/baskets/{basketId}/store": {
       "patch": {
+        "tags": [
+          "Basket"
+        ],
         "responses": {
           "200": {
             "description": "",
@@ -10452,6 +10482,9 @@
     },
     "/commerce/{accountId}/baskets/{basketId}/payment": {
       "patch": {
+        "tags": [
+          "Basket"
+        ],
         "responses": {
           "200": {
             "description": "",
@@ -10801,6 +10834,9 @@
     },
     "/commerce/{accountId}/baskets/{basketId}/donations": {
       "patch": {
+        "tags": [
+          "Basket"
+        ],
         "responses": {
           "200": {
             "description": "",
@@ -11561,6 +11597,9 @@
     },
     "/commerce/{accountId}/v2/checkouts": {
       "post": {
+        "tags": [
+          "Checkout"
+        ],
         "parameters": [
           {
             "name": "accountId",
@@ -11835,6 +11874,9 @@
     },
     "/commerce/{accountId}/baskets": {
       "post": {
+        "tags": [
+          "Basket"
+        ],
         "summary": "Create Basket",
         "parameters": [
           {
@@ -12854,6 +12896,9 @@
     },
     "/commerce/{accountId}/baskets/{basketId}/reconcile": {
       "post": {
+        "tags": [
+          "Basket"
+        ],
         "summary": "Reconcile Basket",
         "parameters": [
           {
@@ -13253,8 +13298,9 @@
     },
     "/commerce/{accountId}/stores": {
       "get": {
+        
         "tags": [
-          "Endpoints"
+          ""
         ],
         "summary": "Get Stores",
         "operationId": "commerce-channel-api-stores-get-stores",
