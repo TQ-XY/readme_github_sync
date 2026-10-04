@@ -5454,7 +5454,7 @@
     "/commerce/{accountId}/baskets/{basketId}/fulfillment": {
       "patch": {
         "tags": [
-          "Basket "
+          "Basket"
         ],
         "summary": "Update Basket - Fulfillment Details",
         "operationId": "commerce-channel-api-baskets-update-basket-fulfillment",
@@ -7440,7 +7440,7 @@
         }
       }
     },
-    "/commerce/{accountId}/baskets/{basketId}/group/policies": {
+    "/commerce/{accountId}/baskets/{basketId}/group/policies":{
       "patch": {
         "tags": [
           "Basket"
@@ -13299,7 +13299,7 @@
     "/commerce/{accountId}/stores": {
       "get": {
         "tags": [
-          ""
+          "Stores"
         ],
         "summary": "Get Stores",
         "operationId": "commerce-channel-api-stores-get-stores",
