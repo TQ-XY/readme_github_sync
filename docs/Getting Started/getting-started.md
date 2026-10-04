@@ -1,5 +1,6 @@
 ---
 title: Welcome to readme_sync
+hidden: false
 privacy:
   view: public
 ---
