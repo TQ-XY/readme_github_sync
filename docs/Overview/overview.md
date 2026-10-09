@@ -1,158 +1,41 @@
-# Overview
+---
+title: Become an Integration Partner
+---
+###
 
-## Become an Integration Partner
+<Accordion title="Sign up as a Partner" icon="fa-duotone fa-solid fa-handshake">
+  Before you can begin an integration project, you need to be onboarded as a partner.
 
-Become a partner to gain access to our APIs. You can then begin developing your Commerce integration.
+  1. Complete the [partner application form](https://www.deliverect.com/en-nl/become-a-partner).
+  2. A member of our Partnership team will reach out to you directly.
+  3. Once you're signed up, you'll receive a **Welcome email** containing:
+     - Access to a staging account
+     - API Credentials
+     - A certification document
+</Accordion>
 
-<HTMLBlock>{`
-<a href="https://www.deliverect.com/en/become-a-partner" target="_blank" class="doc-button">▶ Sign up</a>
-`}</HTMLBlock>
+<Accordion title="Staging Environment Access" icon="fa-duotone fa-solid fa-road-barrier">
+  All initial development and testing will be carried out in our **staging environment**. You won't get production access until our certification process is complete&#x20;
+</Accordion>
+
+<Accordion title="Complete Certification" icon="fa-duotone fa-solid fa-clipboard-list-check">
+  Once your integration supports the required functionality, you'll go through certification.
+
+  - Certification is validated through a series of certification calls with the Deliverect team.
+  - On average, it takes **two calls** to complete certification, though this depends on how ready your integration is going in.
+  - You must meet all requirements in the certification document to pass.
+</Accordion>
+
+<Accordion title="Go Live" icon="fa-duotone fa-solid fa-rocket-launch">
+  **Production access**
+
+  As soon as you pass certification, you'll receive your production credentials — production access is granted immediately after certification is complete.
+
+  **Onboarding your first customer**
+
+  You won't be on your own for this — the Deliverect team will support you through the onboarding of your first live customer.
+</Accordion>
+
+<br />
 
 ***
-
-## Build a Commerce Integration
-
-Below are the general steps to integrating our Commerce API
-
-<HTMLBlock>{`
-<div class="step-list">
-  <div class="step-list-item">
-    <div class="step-list-marker step-list-marker--green">1</div>
-    <div class="step-list-content">
-      <p class="step-list-title">Get an Access Token — <a href="https://developers.deliverect.com/reference/access-token" target="_blank">Get Access Token</a></p>
-      <p class="step-list-desc">Retrieve a token granting you access to our endpoints.</p>
-    </div>
-  </div>
-  <div class="step-list-item">
-    <div class="step-list-marker step-list-marker--green">2</div>
-    <div class="step-list-content">
-      <p class="step-list-title">Retrieve Linked Customer Accounts — <a href="https://developers.deliverect.com/v1.1-restaurants/reference/get-linked-accounts" target="_blank">Get Linked Accounts</a></p>
-      <p class="step-list-desc">Retrieve the customer accounts linked to your partner account.</p>
-    </div>
-  </div>
-  <div class="step-list-item">
-    <div class="step-list-marker step-list-marker--green">3</div>
-    <div class="step-list-content">
-      <p class="step-list-title">Get Stores — <a href="https://developers.deliverect.com/v3.0-ordering-experience/reference/commerce-get-stores" >Get Stores</a></p>
-      <p class="step-list-desc">Retrieve the <code>channelLinkId</code> for a customer account.</p>
-    </div>
-  </div>
-  <div class="step-list-item">
-    <div class="step-list-marker step-list-marker--green">4</div>
-    <div class="step-list-content">
-      <p class="step-list-title">Get Store Menu(s) — <a href="https://developers.deliverect.com/v3.0-ordering-experience/reference/commerce-get-menus" >Get Store Menu(s)</a></p>
-      <p class="step-list-desc">Retrieve menus for a given store.</p>
-    </div>
-  </div>
-  <div class="step-list-item">
-    <div class="step-list-marker step-list-marker--green">5</div>
-    <div class="step-list-content">
-      <p class="step-list-title">Create Basket — <a href="https://developers.deliverect.com/v3.0-ordering-experience/reference/commerce-create-basket" >Create Basket</a></p>
-      <p class="step-list-desc">Create a basket to begin building the order.</p>
-    </div>
-  </div>
-  <div class="step-list-item">
-    <div class="step-list-marker step-list-marker--green">6</div>
-    <div class="step-list-content">
-      <p class="step-list-title">Update Basket (optional)</p>
-      <p class="step-list-desc">Update the basket as needed using the following endpoints:</p>
-      <ul class="step-list-sublist">
-        <li><a href="https://developers.deliverect.com/v3.0-ordering-experience/reference/update-basket-customer" >Update Customer</a></li>
-        <li><a href="https://developers.deliverect.com/v3.0-ordering-experience/reference/update-basket-items" >Update Items</a></li>
-        <li><a href="https://developers.deliverect.com/v3.0-ordering-experience/reference/commerce-update-basket-discounts" >Update Discounts</a></li>
-        <li><a href="https://developers.deliverect.com/v3.0-ordering-experience/reference/update-basket-fulfillment" >Update Fulfillment</a></li><li><a href="https://developers.deliverect.com/v3.0-ordering-experience/reference/update-basket-charges" >Update Charges</a></li>
-        <li><a href="https://developers.deliverect.com/v3.0-ordering-experience/reference/update-basket-payments" >Update Tips</a></li>
-        <li><a href="https://developers.deliverect.com/v3.0-ordering-experience/reference/update-donations" >Update Donations</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="step-list-item">
-    <div class="step-list-marker step-list-marker--green">7</div>
-    <div class="step-list-content">
-      <p class="step-list-title">Request Payment (optional) — <a href="https://developers.deliverect.com/v3.0-ordering-experience/reference/request-payment" >Request Payment</a></p>
-      <p class="step-list-desc">Only applies for DPAY (Deliverect Pay) payment type.</p>
-    </div>
-  </div>
-  <div class="step-list-item">
-    <div class="step-list-marker step-list-marker--green">8</div>
-    <div class="step-list-content">
-      <p class="step-list-title">Checkout — <a href="https://developers.deliverect.com/v3.0-ordering-experience/reference/commerce-checkout" >Basket Checkout</a></p>
-      <p class="step-list-desc">Proceed to checkout and specify the payment method.</p>
-    </div>
-  </div>
-  <div class="step-list-item">
-    <div class="step-list-marker step-list-marker--green">9</div>
-    <div class="step-list-content">
-      <p class="step-list-title">Checkout Status Webhook — <a href="https://developers.deliverect.com/v3.0-ordering-experience/reference/commerce-api-checkout-update" >Basket Checkout Status Webhook</a></p>
-      <p class="step-list-desc">Monitor the status of the checkout.</p>
-    </div>
-  </div>
-</div>
-`}</HTMLBlock>
-
-## =======
-
-title: Welcome to readme_sync
-hidden: false
-privacy:
-view: public
-------------
-
-<Callout icon="📘" theme="info">
-  **Template:**  Delete this callout and edit this page with your content and links.
-</Callout>
-
-<Cards>
-  {/* Edit the props below to customize these components */}
-  <Card title="Quick Start" href="#" icon="fa-duotone fa-rocket-launch">Learn how to get started with our product</Card>
-
-  <Card title="API Reference" href="#" icon="fa-duotone fa-code-simple">Explore endpoints and build your integration</Card>
-
-  <Card title="Build with AI" href="#" icon="fa-duotone fa-sparkles">Use LLM features to automate your workflow</Card>
-</Cards>
-
-<br />
-
-## Recent Releases
-
-<Cards>
-  <Card isNew kind="tile" title="v2.0 Migration" href="#" icon="fa-duotone fa-magnifying-glass">Everything you need to upgrade</Card>
-
-  <Card kind="tile" title="Webhooks" href="#" icon="fa-duotone fa-bullhorn">Real-time events are now available</Card>
-
-  <Card kind="tile" title="Android SDK" href="#" icon="fa-duotone fa-robot">Our native Android library is out of beta</Card>
-</Cards>
-
-<br />
-
-## The Basics
-
-<Cards>
-  <Card title="Customize" href="#" icon="fa-duotone fa-brush" kind="tile">
-    Style the widget to match your brand
-  </Card>
-
-  <Card title="Integrations" href="#" icon="fa-duotone fa-arrow-down-left-and-arrow-up-right-to-center" kind="tile">
-    Connect with third-party services
-  </Card>
-
-  <Card title="CLI" href="#" icon="fa-duotone fa-terminal" kind="tile">
-    Manage resources from your terminal
-  </Card>
-
-  <Card title="Security" icon="fa-duotone fa-shield-dog" kind="tile">
-    Learn how we secure your data
-  </Card>
-
-  <Card title="Common Issues" icon="fa-duotone fa-file-circle-info" kind="tile">
-    Troubleshoot common issues
-  </Card>
-
-  <Card title="Sync" href="#" icon="fa-duotone fa-code-compare" kind="tile">
-    Connect to a storage provider
-  </Card>
-</Cards>
-
-<br />
-
-> > > > > > > 7e2fcc59add1e763fe2e69625c8b3e60fb695ef4:docs/Getting Started/overview\.md
